@@ -1,14 +1,14 @@
 import React from 'react'
-import "./about.css"
+import "./About.css"
 import about from "../../assets/images/about.png"
 import play_icon from "../../assets/images/play-icon.png"
 
-export default function About () {
+export default function About ({setPlayState}) {
   return (
      <div className='about'>
       <div className="about-left">
         <img src={about} alt="" className='about-img' />
-        <img src={play_icon} alt="" className='play-icon'/>
+        <img src={play_icon} alt="" className='play-icon' onClick={() => {setPlayState(true)}} />
       </div>
      <div className="about-right">
         <h3> ABOUT UNIVERSITY </h3>
